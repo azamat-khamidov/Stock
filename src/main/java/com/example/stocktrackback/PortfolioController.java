@@ -10,4 +10,11 @@ public class PortfolioController {
     @Autowired
     private IPortfolioService portfolioService;
 
+    // sample mapping
+    // TODO REMOVE BEFORE FINAL VERSION
+    @GetMapping(value="/sample")
+    public String getSample(){
+        return portfolioService.getSample();
+    }
+
 }
