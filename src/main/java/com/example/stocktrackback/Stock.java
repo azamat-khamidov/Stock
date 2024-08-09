@@ -3,14 +3,14 @@ package com.example.stocktrackback;
 public class Stock extends Security {
     private String ticker;
 
-    public Stock(String id, String name, int quantity, int purchase_price, int current_price, String ticker) {
-        super(id, name, quantity, purchase_price, current_price);
+    public Stock(String id, String name, String ticker) {
+        super(id, name);
         this.ticker = ticker;
     }
 
     @Override
     public double getCurrentValue() {
-        return getCurrent_price() * getQuantity();
+        return 0; //TODO query Yahoo
     }
 
     @Override
