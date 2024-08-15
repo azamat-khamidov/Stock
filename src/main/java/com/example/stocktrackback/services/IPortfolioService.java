@@ -1,4 +1,4 @@
-package com.example.stocktrackback;
+package com.example.stocktrackback.services;
 
 public interface IPortfolioService {
 
