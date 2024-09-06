@@ -1,0 +1,247 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.top-banner {
+  background-image: url('../public/VaporwaveBanner.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  background-color: #4CAF50;
+  color: rgb(12, 0, 15);
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+  font-size: 24px;
+  height:100px;
+  font-weight: bold;
+  position: relative;
+}
+
+.top-banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to top, #23003b, rgba(35, 0, 59, 0));
+  pointer-events: none; 
+}
+
+.sub-banner {
+  background-color: #23003b; 
+  height: 5px; 
+  padding: 5px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.overlay-image {
+  position: absolute;
+  top: 3px;
+  right: 20px; 
+  width: 200px; 
+  height: auto; 
+}
+
+.parent-container {
+  display: flex;
+  height: 74vh;
+}
+
+
+.left-column {
+  background: linear-gradient(to bottom, #23003b, #ea02ff);
+  background-color: #20003a;
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  color: #ffffff;
+  flex: 0 0 25%;
+}
+
+.left-column h2 {
+  font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  color: #00FF00; 
+  text-shadow: 1px 1px 2px #aaa; 
+}
+
+.left-column ul { 
+  padding-left: 20px; 
+  list-style-type: none;
+}
+
+.left-column ul li {
+  margin-bottom: 10px; 
+  font-size: 1.2em;
+  color: #ffffff; 
+}
+
+.right-column {
+  background-color: #ffffff;
+  border-radius: 15px 0 0 0;
+  width: 75%;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.lower-banner {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  overflow-y: auto;
+}
+
+.button-base {
+  margin-top: 2px;
+  margin: 0 3px;
+  border-radius: 1px;
+  font-size: 11px;
+  font-family: Tahoma, Verdana;
+  color: #070707;
+  text-align: center;
+  outline: none;
+  background: #bfbfbf;
+  border: 1px solid;
+  border-top-color: #dfdfdf;
+  border-left-color: #dfdfdf;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  box-shadow: 1px 1px 0 0 #000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+label {
+  margin-right: 10px;
+  font-size: 11px;
+}
+input {
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.button-base:hover {
+  color: white;
+}
+
+#add-by-ticker:hover {
+  background-color: green;
+}
+
+#delete-by-ticker:hover {
+  background-color: red;
+}
+
+#transaction-history:hover {
+  background-color: blue;
+}
+
+.price, .cost {
+  display: block;
+  margin-top: 5px;
+  font-family: 'Arial', sans-serif; 
+  font-size: 14px; 
+  color: #000; 
+}
+
+.input-group label {
+  display: block;
+  font-family: Tahoma, Verdana; 
+  font-size: 11px; 
+  color: #000; 
+  margin-bottom: 5px;
+}
+
+.input-box {
+  font-size: 11px;
+  font-family: 'Tahoma', 'Verdana', sans-serif;
+  color: #000000; 
+  text-align: left;
+  padding: 6px;
+  background: #ffffff; 
+  border: 1px solid #000000; 
+  border-radius: 2px; 
+  box-shadow: 2px 2px 0 #808080; 
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-box:focus {
+  border-color: #000080; 
+  box-shadow: 2px 2px 0 #000080; 
+}
+
+#news-articles {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+  background-color: #000; 
+  color: #00FF00; 
+  font-family: 'Courier New', Courier, monospace; 
+  padding: 10px;
+}
+
+.stock-item {
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 16px; 
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
